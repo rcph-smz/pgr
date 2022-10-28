@@ -70,190 +70,45 @@
         const graduated = document.querySelector(".temp-data-graduated")
         const inactive_students = document.querySelector(".temp-data-inactive-students")
 
-        const tag = ["freshman","graduated","terminated"]
-        const commandant = {
-            students:
-                [
-                    {
-                        "name": "Blitzstream",
-                        "id": "11269520",
-                        "status": undefined,
-                        "tag": "graduated",
-                        "generation": 1
-                    },
-                    {
-                        "name": "Typo",
-                        "id": "12419320",
-                        "status": undefined,
-                        "tag": "graduated",
-                        "generation": 1
-                    },
-                    {
-                        "name": "Xiao",
-                        "id": "11354428",
-                        "status": undefined,
-                        "tag": "graduated",
-                        "generation": 1
-                    },
-                    {
-                        "name": "arcea",
-                        "id": "17751049",
-                        "status": undefined,
-                        "tag": "terminated",
-                        "generation": 1
-                    },
-                    {
-                        "name": "PEKONG",
-                        "id": "12478827",
-                        "status": undefined,
-                        "tag": "terminated",
-                        "generation": 1
-                    },
-                    {
-                        "name": "Godkabuto",
-                        "id": "11941136",
-                        "status": undefined,
-                        "tag": "terminated",
-                        "generation": 1
-                    },
-                    {
-                        "name": "Rham",
-                        "id": "14456474",
-                        "status": undefined,
-                        "tag": "terminated",
-                        "generation": 2
-                    },
-                    {
-                        "name": "Zurch",
-                        "id": "14159300",
-                        "status": undefined,
-                        "tag": "terminated",
-                        "generation": 2
-                    },
-                    {
-                        "name": "Kyunu(Ee)",
-                        "id": "12701527",
-                        "status": undefined,
-                        "tag": "terminated",
-                        "generation": 2
-                    },
-                    {
-                        "name": "Jemuzu",
-                        "id": "12466667",
-                        "status": undefined,
-                        "tag": "terminated",
-                        "generation": 3
-                    },
-                    {
-                        "name": "KYRIE",
-                        "id": "14968013",
-                        "status": undefined,
-                        "tag": "terminated",
-                        "generation": 3
-                    },
-                    {
-                        "name": "Lokipy",
-                        "id": "15590516",
-                        "status": undefined,
-                        "tag": "terminated",
-                        "generation": 3
-                    },
-                    {
-                        "name": "NikitaChan",
-                        "id": "13687116",
-                        "status": undefined,
-                        "tag": "terminated",
-                        "generation": 4
-                    },
-                    {
-                        "name": "GodJosus",
-                        "id": "16265395",
-                        "status": undefined,
-                        "tag": "terminated",
-                        "generation": 4
-                    },
-                    {
-                        "name": "trueleon",
-                        "id": "15552445",
-                        "status": undefined,
-                        "tag": "graduated",
-                        "generation": 2
-                    },
-                    {
-                        "name": "Hanhime",
-                        "id": "19545055",
-                        "status": undefined,
-                        "tag": "graduated",
-                        "generation": 2
-                    },
-                    {
-                        "name": "Commandant09467",
-                        "id": "16319852",
-                        "status": undefined,
-                        "tag": "terminated",
-                        "generation": 4
-                    },
-                    {
-                        "name": "kyyy",
-                        "id": "12406902",
-                        "status": undefined,
-                        "tag": "terminated",
-                        "generation": 5
-                    },
-                    {
-                        "name": "Commandant00256",
-                        "id": "16348457",
-                        "status": undefined,
-                        "tag": "terminated",
-                        "generation": 5
-                    },
-                    {
-                        "name": "Theologo",
-                        "id": "13007203",
-                        "status": undefined,
-                        "tag": "graduated",
-                        "generation": undefined
-                    },
-                    {
-                        "name": "Tyrish",
-                        "id": "14976725",
-                        "status": undefined,
-                        "tag": "freshman",
-                        "generation": undefined
-                    },
-                    {
-                        "name": "Yuuki",
-                        "id": "17164954",
-                        "status": undefined,
-                        "tag": "freshman",
-                        "generation": undefined
-                    },
-                    {
-                        "name": "Suicide",
-                        "id": "18335200",
-                        "status": undefined,
-                        "tag": "freshman",
-                        "generation": undefined
-                    }
-                ]
-        }
+        // const tag = ["freshman","graduated","terminated"]
 
-        function filter(collection, tag, generation) {
-            let collector = ""
-            for(i of collection){
-                if(i.tag != tag) continue
-                if(i.generation != generation && generation != undefined) continue
+        // function filter(collection, tag, generation) {
+        //     let collector = ""
+        //     for(i of collection){
+        //         if(i.tag != tag) continue
+        //         if(i.generation != generation && generation != undefined) continue
 
-                collector += `${i.name} - ${i.id} - gen: ${i.generation}\n`
-            }
-            return collector
-        }
+        //         collector += `${i.name} - ${i.id} - gen: ${i.generation}\n`
+        //     }
+        //     return collector
+        // }
 
 
-        students.textContent = filter(commandant.students,"freshman")
+        students.textContent = `Tyrish - 14976725 - gen: undefined
+Yuuki - 17164954 - gen: undefined
+Suicide - 18335200 - gen: undefined`
 
-        graduated.textContent = filter(commandant.students,"graduated")
-        inactive_students.textContent = filter(commandant.students,"terminated")
+        graduated.textContent = `Blitzstream - 11269520 - gen: 1
+Typo - 12419320 - gen: 1
+Xiao - 11354428 - gen: 1
+trueleon - 15552445 - gen: 2
+Hanhime - 19545055 - gen: 2
+Theologo - 13007203 - gen: 2
+        `
+        inactive_students.textContent = `arcea - 17751049 - gen: 1
+PEKONG - 12478827 - gen: 1
+Godkabuto - 11941136 - gen: 1
+Rham - 14456474 - gen: 2
+Zurch - 14159300 - gen: 2
+Kyunu(Ee) - 12701527 - gen: 2
+Jemuzu - 12466667 - gen: 3
+KYRIE - 14968013 - gen: 3
+Lokipy - 15590516 - gen: 3
+NikitaChan - 13687116 - gen: 4
+GodJosus - 16265395 - gen: 4
+Commandant09467 - 16319852 - gen: 4
+kyyy - 12406902 - gen: 5
+Commandant00256 - 16348457 - gen: 5`
 
         friends.textContent = `Asuna - 10265389
 Hazama - 16961306
